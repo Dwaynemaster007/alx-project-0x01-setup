@@ -49,7 +49,7 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(user);
+    onSubmit({ ...user, id: 1 }); // Assign default id to satisfy UserProps
     onClose();
   };
 
