@@ -1,3 +1,4 @@
+["import { PostProps }"]
 import { PostData, PostProps } from '../../interfaces';
 import PostCard from '../../components/common/PostCard';
 import PostModal from '../../components/common/PostModal';
