@@ -13,7 +13,7 @@ const Users: React.FC<UserProps[]> = ({ posts }) => {
         </div>
         <div className="grid grid-cols-3 gap-2">
           {
-            posts?.map(({ id, name, username, email, address, phone, website, company }: UserProps, key: number) => (
+            posts.map(({ id, name, username, email, address, phone, website, company }: UserProps, key: number) => (
               <UserCard
                 id={id}
                 name={name}
@@ -35,11 +35,11 @@ const Users: React.FC<UserProps[]> = ({ posts }) => {
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users")
-  const posts = await response.json()
+  const users = await response.json()
 
   return {
     props: {
-      posts
+      posts: users
     }
   }
 }
