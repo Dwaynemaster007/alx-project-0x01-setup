@@ -1,5 +1,7 @@
 import React from 'react';
-import Header from '../components/layout/Header';
+// Make sure the Header component exists at the correct path
+// Update the import path to the correct location of Header
+import Header from '../../components/layout/Header';
 
 const PostsPage: React.FC = () => {
   return (
